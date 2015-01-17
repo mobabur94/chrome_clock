@@ -1,0 +1,18 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #c0c0c0;
+	background: #272727;
+}
+
+#clock {
+	display: block;
+	text-align: center;
+	line-height: 10px;
+	cursor: default;
+	-webkit-user-select: none;
+}
