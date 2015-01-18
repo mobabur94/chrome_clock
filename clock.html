@@ -2,11 +2,37 @@
 <html>
 	<head>
 		<title>Clock</title>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="clock.css" />
+		<link rel="shortcut icon" href="icon-16.png" />
 		<script src="jquery.js"></script>
-		<script src="script.js"></script>
+		<script src="clock.js"></script>
 	</head>
 	<body>
-		<span id="clock">error</span>
+		<div id="digital-container">
+			<div id="digital"></div>
+		</div>
+		<div id="analog-container">
+			<svg id="analog" viewBox="0 0 1200 1200">
+				<circle id="bezel" cx="600" cy="600" r="600" />
+				<circle id="face" cx="600" cy="600" r="590" />
+				<polygon class="tick" points="595,40 600,20 605,40 600,60" transform="rotate(0   600 600)" />
+				<polygon class="tick" points="595,40 600,20 605,40 600,60" transform="rotate(30  600 600)" />
+				<polygon class="tick" points="595,40 600,20 605,40 600,60" transform="rotate(60  600 600)" />
+				<polygon class="tick" points="595,40 600,20 605,40 600,60" transform="rotate(90  600 600)" />
+				<polygon class="tick" points="595,40 600,20 605,40 600,60" transform="rotate(120 600 600)" />
+				<polygon class="tick" points="595,40 600,20 605,40 600,60" transform="rotate(150 600 600)" />
+				<polygon class="tick" points="595,40 600,20 605,40 600,60" transform="rotate(180 600 600)" />
+				<polygon class="tick" points="595,40 600,20 605,40 600,60" transform="rotate(210 600 600)" />
+				<polygon class="tick" points="595,40 600,20 605,40 600,60" transform="rotate(240 600 600)" />
+				<polygon class="tick" points="595,40 600,20 605,40 600,60" transform="rotate(270 600 600)" />
+				<polygon class="tick" points="595,40 600,20 605,40 600,60" transform="rotate(300 600 600)" />
+				<polygon class="tick" points="595,40 600,20 605,40 600,60" transform="rotate(330 600 600)" />
+				<circle id="big-dot" cx="600" cy="600" r="20" />
+				<polygon id="hour" points="580,600 600,240 620,600" transform="rotate(-60 600 600)" />
+				<polygon id="minute" points="580,600 600,60 620,600" transform="rotate(+60 600 600)" />
+				<circle id="little-dot" cx="600" cy="600" r="10" />
+				<polygon id="second" points="590,600 600,60 610,600" transform="rotate(0 600 600)" />
+			</svg>
+		</div>
 	</body>
 </html>

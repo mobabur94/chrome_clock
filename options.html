@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Clock Options</title>
+		<link rel="stylesheet" href="options.css" />
+		<link rel="shortcut icon" href="icon-16.png" />
+		<script src="jquery.js"></script>
+		<script src="options.js"></script>
+	</head>
+	<body>
+		<div>
+			<label>
+				<button id="open" type="button" title="click to open the clock in a new tab">Open Clock</button>
+			</label>
+		</div>
+		<div>
+			<label>
+				<input id="analog" type="checkbox" /> Analog Mode
+			</label>
+		</div>
+		<div>
+			<label>
+				<input id="military" type="checkbox" /> 24 Hour Format
+			</label>
+		</div>
+		<div>
+			<label>
+				Pop-up Size <input id="size" type="range" min="72" max="408" step="12" />
+			</label>
+		</div>
+		<div>
+			<label>
+				Accent Color <input id="accent" type="color" />
+			</label>
+		</div>
+		<div>
+			<label>
+				Foreground Color <input id="foreground" type="color" />
+			</label>
+		</div>
+		<div>
+			<label>
+				Background Color <input id="background" type="color" />
+			</label>
+		</div>
+		<div>
+			<label>
+				Font
+				<select id="font">
+					<option value="serif">Serif</option>
+					<option value="sans-serif">Sans Serif</option>
+					<option value="monospace">Monospace</option>
+					<option value="cursive">Cursive</option>
+					<option value="fantasy">Fantasy</option>
+				</select>
+			</label>
+		</div>
+		<div>
+			<button id="save" type="button" title="click to save options">Save</button>
+		</div>
+		<div>
+			<span id="status"></span>
+		</div>
+
+	</body>
+</html>
