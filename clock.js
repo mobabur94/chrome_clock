@@ -4,7 +4,7 @@ function rotate(element, angle, origin) {
 
 function update() {
 	chrome.storage.sync.get({
-		"analog": false,
+		"analog": true,
 		"military": false,
 		"size": 144,
 		"accent": "#ff0000",

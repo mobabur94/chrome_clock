@@ -31,7 +31,7 @@ function save() {
 
 function load() {
 	chrome.storage.sync.get({
-		"analog": false,
+		"analog": true,
 		"military": false,
 		"size": 144,
 		"accent": "#ff0000",
@@ -42,9 +42,9 @@ function load() {
 		$("#analog")[0].checked = items["analog"];
 		$("#military")[0].checked = items["military"];
 		$("#size").val(items["size"]);
-		$("#accent").val(items["accent"]);
-		$("#foreground").val(items["foreground"]);
-		$("#background").val(items["background"]);
+		$("#accent").val(items["accent"]).trigger('change');
+		$("#foreground").val(items["foreground"]).trigger('change');
+		$("#background").val(items["background"]).trigger('change');
 		$("#font").val(items["font"]);
 	});
 };
@@ -53,4 +53,8 @@ $(document).ready(function() {
 	load();
 	$("#save").on("click", save);
 	$("#open").on("click", open);
+	$("#accent, #foreground, #background").on('change', function(event){
+		$input = $(event.target);
+		$input.css('background', $input.prop('value'));
+	});
 });
